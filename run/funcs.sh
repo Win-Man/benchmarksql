@@ -41,6 +41,9 @@ function setCP()
 	mysql)
 	    cp="../lib/mysql/*:../lib/*"
 	    ;;
+	tidb)
+		cp="../lib/tidb/*:../lib/*"
+		;;
     esac
     myCP=".:${cp}:../dist/*"
     export myCP
@@ -51,7 +54,7 @@ function setCP()
 # is a database, we support.
 # ----
 case "$(getProp db)" in
-    firebird|oracle|postgres|mysql)
+    firebird|oracle|postgres|mysql|tidb)
 	;;
     "")	echo "ERROR: missing db= config option in ${PROPS}" >&2
 	exit 1

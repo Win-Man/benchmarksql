@@ -29,6 +29,7 @@ public class ExecJDBC {
 
     // Register jdbcDriver
     Class.forName(ini.getProperty( "driver" ));
+    System.out.println();
 
     // make connection
     conn = DriverManager.getConnection(ini.getProperty("conn"),
