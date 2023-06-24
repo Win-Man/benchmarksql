@@ -63,4 +63,3 @@ case "$(getProp db)" in
 	exit 1
 	;;
 esac
-
